@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return 'NIM: 2241727024 <br> Nama : Muhammad Akita Jabbar Razzaq <br> Kelas : Web-B';
+});
+
+Route::get('/articles/{id}', function ($id) {
+    return 'Halaman artikel ini dengan id ' . $id;
+});
