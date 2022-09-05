@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('/about', function () {
-    return 'NIM: 2241727024 <br> Nama : Muhammad Akita Jabbar Razzaq <br> Kelas : Web-B';
-});
+// Route::get('/about', function () {
+//     return 'NIM: 2241727024 <br> Nama : Muhammad Akita Jabbar Razzaq <br> Kelas : Web-B';
+// });
 
-Route::get('/articles/{id}', function ($id) {
-    return 'Halaman artikel ini dengan id ' . $id;
-});
+// Route::get('/articles/{id}', function ($id) {
+//     return 'Halaman artikel ini dengan id ' . $id;
+// });
+
+Route::get('/', [PageController::class, 'index']);
+
+Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/articles/{id}', [PageController::class, 'articles']);
