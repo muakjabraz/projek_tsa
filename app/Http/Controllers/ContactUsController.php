@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class ContactUsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
-        return 'Halaman artikel ini dengan id ' . $id;
+        return '<a href="https://www.educastudio.com/contact-us ">
+        https://www.educastudio.com/contact-us ';
     }
 
     /**
@@ -45,7 +46,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return 'Halaman artikel ini dengan id ' . $id;
+        //
     }
 
     /**

@@ -4,16 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index($id)
+    public function product($id)
     {
-        return 'Halaman artikel ini dengan id ' . $id;
+        return '<a href="https://www.educastudio.com/category/' . $id . '">
+        https://www.educastudio.com/category/' . $id . '</a>';
     }
 
     /**
@@ -45,7 +41,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return 'Halaman artikel ini dengan id ' . $id;
+        //
     }
 
     /**

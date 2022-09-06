@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class NewsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index($id)
+    // /**
+    //  * Display a listing of the resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    public function news($id = null)
     {
-        return 'Halaman artikel ini dengan id ' . $id;
+        if ($id == null) return  '<a href = "https://www.educastudio.com/news">
+            https://www.educastudio.com/news</a>';
+        return '<a href = "https://www.educastudio.com/news/' . $id . '">
+        https://www.educastudio.com/news/' . $id . '</a>';
     }
 
     /**
@@ -45,7 +48,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return 'Halaman artikel ini dengan id ' . $id;
+        //
     }
 
     /**
